@@ -29,7 +29,7 @@ const WebSocketComponent: React.FC<WebSocketComponentProps> = React.memo(({ onCo
     };
 
     const handleMessage = (ev: MessageEvent<any>) => {
-        const parsedData = JSON.parse(ev.data); // 解析接收到的消息
+        const parsedData = JSON.parse(ev.data.toString()); // 解析接收到的消息
         console.log("Received raw data:", parsedData); // 打印原始數據
         // 這裡檢查所有可能的返回值
         if (parsedData.method) {
