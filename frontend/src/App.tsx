@@ -5,8 +5,8 @@ import WebSocketComponent from './WebSocketComponent';
 const App: React.FC = () => {
   const [connectionStatus, setConnectionStatus] = useState<string>("Disconnected");
   const [messages, setMessages] = useState<string[]>([]);
-  const account = "GzErnv5yVV6n8yQk43ZWNuwvXoGhxrGDXTs2yvv5jW1b"; // 需要訂閱的帳戶地址
-
+  const account = "HdhqEd7sfmeTS5dyi17TRymLhEy7kxz8MhKp9CzkB28U"; // 需要訂閱的帳戶地址
+//GzErnv5yVV6n8yQk43ZWNuwvXoGhxrGDXTs2yvv5jW1b
   const handleConnectionStatus = useCallback((status: string) => {
     setConnectionStatus(status);
   }, []);
@@ -20,7 +20,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h2>WebSocket Status: {connectionStatus}</h2>
-      </header>
+      </header> 
       <WebSocketComponent 
         onConnectionStatus={handleConnectionStatus} 
         account={account} 

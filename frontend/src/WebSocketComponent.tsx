@@ -34,9 +34,11 @@ const WebSocketComponent: React.FC<WebSocketComponentProps> = React.memo(({ onCo
         // 這裡檢查所有可能的返回值
         if (parsedData.method) {
           console.log(`Received method: ${parsedData.method}`);
+          console.log("lamports: ", parsedData?.params?.result?.value?.lamports)
         }
         if (parsedData.result) {
           console.log("Result: ", parsedData.result);
+          console.log("lamports: ", parsedData?.params?.result?.value?.lamports)
         }
         if (parsedData.error) {
           console.error("Error: ", parsedData.error);
